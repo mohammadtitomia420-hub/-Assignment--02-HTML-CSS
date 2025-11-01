@@ -8,7 +8,7 @@ body{
   width: 100%;
 margin: 0;
   padding: 0;
-  margin-left: 30px;
+  background: #f4f1f1;
   
 }
 
@@ -32,7 +32,6 @@ nav{
   margin-left: 60px;
   margin: 10px 0px;
   color: rgba(6, 193, 103, 1);
-;
   cursor: pointer;
 }
 ul{
@@ -93,8 +92,8 @@ color: black;
 
 .hero-section{
   display: flex;
-  border: 1px solid;
   height: auto;
+  overflow: visible;
 }
 .hero-left{
   width: 50%;
@@ -109,7 +108,7 @@ color: black;
 }
 h1{
 font-weight: 600;
-font-size: 65px;
+font-size: 75px;
 }
 .hero-p{
   margin-top: 20px;
@@ -131,12 +130,10 @@ font-size: 65px;
   margin-left:15px ;
 }
 .brand-logo{
-  width: 80%;
-  margin-top: 120px;
-  margin-right:200px ;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
+  max-height: 90px;
 }
 .brand-logo2{
   width: 100%;
@@ -144,12 +141,16 @@ font-size: 65px;
   justify-content:space-between;
 }
 .logoismp{
-  width: 70px;
+  width: 120px;
   height: auto;
+  
 
 }
 .hero.nav-right{
   width: 50%;
+  position: relative;
+}
+.hero-right{
   position: relative;
 }
 .hero-img{
@@ -159,7 +160,51 @@ font-size: 65px;
   margin-left: 20px;
   position:sticky;
 }
+.five-star{
+  background-color: rgb(255, 255, 255);
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 2%;
+  transform: translate(-30%, -50%);
 
+}
+.five-star img{
+  width: 12px;
+}
+.five-star-p{
+font-size: 14px;
+}
+.good-product{
+ background-color: rgb(255, 255, 255);
+  width: 180px;
+  height: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  z-index: 2;
+  margin-left: 270px;
+   top: 37%;
+  left: 9%;
+  transform: translate(-30%, -50%);
+}
+.good-product p{
+  font-size: 14px;
+}
+.good-product img{
+  width: 25px;
+}
 .overphoto{
 z-index: 20;
 position: absolute;
@@ -179,6 +224,19 @@ height: auto;
     margin-top: 80px;
     position: absolute;
     width: 410px;
+  }
+  .hero-img{
+    position: relative;
+  }
+  .five-star{
+    margin-left: 320px;
+    margin-top: 200px;
+  }
+  .good-product{
+ margin-top: 330px;
+  }
+  .overphoto{
+    position: static;
   }
 }
 
@@ -216,6 +274,34 @@ height: auto;
 }
 
 }
+
+@media (max-width:887px){
+  .hero-section{
+    flex-direction: column;
+    text-align: center;
+  }
+.hero-left{
+  margin-bottom: 90px;
+}
+.button{
+  max-width: 400px;
+}
+
+  .hero-left, .hero-right{
+    width: 100%;
+    .button{
+      width: 100%;
+  margin-top: 5px;   
+    }
+    .brand-logo{
+      display: none;
+    }
+  
+   
+}
+
+}
+
 @media(max-width:582px){
   .hero-img{
     margin-top: 150px;
@@ -294,11 +380,16 @@ margin: 50px;
  
 }
 .service-font{
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 18px;
   margin-bottom: 5px;
+  color: rgba(29, 29, 31, 1);
 }
 .service-smallfont{
   margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(29, 29, 31, 1);
 }
 
 .service-right{
@@ -349,12 +440,15 @@ align-items: center;
 }
 .h2-benifits{
   margin-top: 20px;
-  font-size: 40px;
+  font-size: 60px;
   margin-bottom: 40px;
+  font-weight: 500;
 }
 
 .our-benifits{
   margin-top: 50px;
+  font-size: 15px;
+  font-weight: 500;
 }
 .tik-p{
   display:flex;
@@ -398,11 +492,14 @@ align-items: center;
   .ourstar-p{
     margin-top: 60px;
     margin-left: 70px;
+    font-size: 15px;
+    font-weight: 500;
   }
   .ourstar-h2{
     margin-top: 20px;
     margin-left: 70px;
-    font-size: 40px;
+    font-size: 60px;
+    font-weight: 500;
   }
   .star-count{
     display: flex;
@@ -650,11 +747,11 @@ align-items: center;
   /* big-photo section start */
 
 .big-photo{
-
+width: calc(100% - 60px);
+margin: 0 25px; 
   position: relative;
   margin-top: 100px;
-  height: 60vh;
-  min-height: 300px;
+  height: 80vh;
   background-image: url('./img/bigphoto.png');
   background-size: cover; 
   background-position: center;
@@ -665,11 +762,11 @@ align-items: center;
 /* overlay content - center both vertically & horizontally */
 .big-photo-content{
   position: absolute;
-  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   text-align: center;
   padding: 1rem;
@@ -691,7 +788,8 @@ align-items: center;
   padding: 20px 20px;
   font-size: 1rem;
   cursor: pointer;
-  width: 10rem;
+  max-width: 10rem;
+  height: auto;
   margin-top: 25px;
 }
 .big-photo-button{
@@ -708,13 +806,11 @@ align-items: center;
 
   /* Footer section start */
 footer{
-  height: 80vh;
   margin-top: 50px;
   text-align: center;
 }
 .footer-section{
   display: flex;
-  border: 1px solid;
   justify-content: space-around;
   margin-bottom: 70px;
   height: auto;
@@ -722,8 +818,8 @@ footer{
 .footer-1{
   max-width: 284px;
   max-height: 208px;
-  border: 1px solid black;
   display: block;
+  
 }
 .footer-logo{     
   text-align: start;
@@ -740,7 +836,6 @@ font-size: 16px;
 }
 
 .footer-social-icon{
-  border: 1px solid;
   display: flex;
   margin-top: 20px;
   max-width: 100px;
@@ -750,21 +845,22 @@ font-size: 16px;
 .footer-icon-fb{
   width: 10px;
   height: auto;
+  cursor: pointer;
 }
 .footer-icon-insta{
   width: 17px;
   height: auto;
+  cursor: pointer;
 }
 .footer-icon-twitter{
   width: 20px;
   height: auto;
+  cursor: pointer;
 }
-
 
 .footer-2{
   max-width: 107px;
   max-height: 194px;
-  border: 1px solid;
 }
 .footer-about{
   text-align: start;
@@ -785,7 +881,6 @@ font-size: 16px;
 .footer-3{
   max-width: 110px;
   max-height: 194px;
-  border: 1px solid;
 }
 .footer-company{
   text-align: start;
@@ -805,7 +900,6 @@ font-size: 16px;
 .footer-4{
   max-width: 338px;
   max-height: 195px;
-  border: 1px solid;
 }
 .footer-gettouch{
   text-align: start;
@@ -826,13 +920,13 @@ font-size: 16px;
   margin-top: 20px;
 }
 .footer-input-email{
+  padding-left: 20px;
   font-size: 14px;
   font-weight: 400;
   width:205px;
   height: 50px;
   background-color: rgba(240, 241, 236, 1);
-  border-color: blueviolet;
-  border-width:2px;
+  border:none;
   margin-right: 20px;
 }
 .footer-button{
@@ -844,6 +938,7 @@ font-size: 16px;
   color: white;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .footer-copyright{
@@ -854,4 +949,34 @@ font-size: 16px;
 
 /* mobile Responsive */
 
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section > div {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-1{
+  margin: 30px auto;
+    text-align: center;
+  
+  }
+  .footer-2{
+    margin: 30px auto;
+    text-align: center;
+  }
+  .footer-3{
+    margin: 30px auto;
+    text-align: center;
+  }
+  .footer-logo,.footer-p,.footer-about,.footer-company,.footer-gettouch,.footer-gettouch-p,.footer-2 ul li,.footer-3 ul li{
+    text-align: center;
+  }
+  .footer-social-icon{
+    margin-left: 90px;
+  }
+}
   /* Footer section end */
