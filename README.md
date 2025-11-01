@@ -2,6 +2,7 @@
 ### Name : Md Tito Miya
 ### Email: mohammadtitomia420@gmail.com
 ## Live url: https://effortless-kelpie-4ec67b.netlify.app/
+## Github repo addres: https://github.com/mohammadtitomia420-hub/-Assignment--02-HTML-CSS
 
 # Foodies — Responsive Food Website (HTML & CSS)
 
